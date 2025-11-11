@@ -231,7 +231,7 @@ async def update(
         url="https://cdn.discordapp.com/attachments/1371799622317510688/1437785002879484048/file_00000000df3c7207a5e646df01606670.png"
     )
 
-    mention_text = ""
+    mention_text = "<@&1414431927880122409>"
     await interaction.response.send_message("✅ Update dikirim!", ephemeral=True)
     await interaction.channel.send(mention_text, embed=embed)
     print(f"[LOG] /update oleh {interaction.user} -> {product} ({tier})")
