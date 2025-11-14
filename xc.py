@@ -219,6 +219,7 @@ async def update(
         value=(
             "**Please Execute Again**, and use new updated version now\n"
             f"If u got a bug, report on <#1414518549887713354>\n"
+            f"Claim your 488 free ugphone diamond <#1433078414730068090>\n"
         ),
         inline=False
     )
