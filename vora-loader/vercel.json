@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/loader.lua",
+      "destination": "/api/loader.lua"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
