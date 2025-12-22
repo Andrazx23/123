@@ -2,7 +2,9 @@
   "version": 2,
   "functions": {
     "api/loader.js": {
-      "runtime": "nodejs18.x"
+      "runtime": "nodejs20.x",
+      "memory": 128,
+      "maxDuration": 10
     }
   },
   "rewrites": [
@@ -13,14 +15,18 @@
     {
       "source": "/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/public/(.*)",
+      "destination": "/public/$1"
     }
   ],
   "headers": [
     {
       "source": "/loader.lua",
       "headers": [
-        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
+        {"key": "Access-Control-Allow-Origin", "value": "*"},
+        {"key": "Access-Control-Allow-Methods", "value": "GET"}
       ]
     }
   ],
