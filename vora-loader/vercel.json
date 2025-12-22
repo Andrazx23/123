@@ -1,12 +1,27 @@
 {
+  "version": 2,
+  "functions": {
+    "api/loader.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/loader.lua",
-      "destination": "/api/loader.lua"
+      "destination": "/api/loader"
     },
     {
       "source": "/",
       "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/loader.lua",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ],
   "cleanUrls": true,
