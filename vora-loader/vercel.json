@@ -1,35 +1,10 @@
 {
-  "version": 2,
-  "functions": {
-    "api/loader.js": {
-      "runtime": "nodejs20.x",
-      "memory": 128,
-      "maxDuration": 10
-    }
-  },
   "rewrites": [
-    {
-      "source": "/loader.lua",
-      "destination": "/api/loader"
-    },
-    {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/public/(.*)",
-      "destination": "/public/$1"
-    }
+    { "source": "/loader.lua", "destination": "/api/loader" },
+    { "source": "/", "destination": "/index.html" }
   ],
-  "headers": [
-    {
-      "source": "/loader.lua",
-      "headers": [
-        {"key": "Access-Control-Allow-Origin", "value": "*"},
-        {"key": "Access-Control-Allow-Methods", "value": "GET"}
-      ]
-    }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  "functions": {
+    "api/loader.js": { "runtime": "nodejs20.x" }
+  },
+  "cleanUrls": true
 }
