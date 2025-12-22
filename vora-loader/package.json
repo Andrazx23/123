@@ -1,8 +1,11 @@
 {
-  "name": "anti-crack-loader",
+  "name": "vora-loader",
   "version": "1.0.0",
   "private": true,
-  "type": "module",  // Penting buat import ESM
+  "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "vercel dev"
   }
