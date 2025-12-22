@@ -1,5 +1,9 @@
 {
   "name": "anti-crack-loader",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "type": "module",  // Penting buat import ESM
+  "scripts": {
+    "dev": "vercel dev"
+  }
 }
